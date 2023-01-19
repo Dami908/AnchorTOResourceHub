@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title >AnchorTO Resource Hub</title>
+<link rel="icon" href="/Images/AnchorTO.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1250px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float:left;
+  width: 103.33%; /*103.33*/
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display:grid;
+}
+
+/* Style the buttons */
+.btn {
+    margin-bottom: 10px;
+    padding-right: 450px;
+    padding: 13px 20px;
+    border: 1px solid #E37263;
+    border-radius: 7px;
+    background-color: #fff;
+    -webkit-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
+    color: #333;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:focus {
+  outline: 0 solid transparent;
+}
+
+
+.btn:hover {
+  background-color: #E37263;
+  transform: scale(1.05);
+}
+
+
+.btn.active {
+  background-color: #E37263;
+  color: white;
+  
+}
+/* Style the buttons */
+.btn2 {
+    margin-bottom: 10px;
+    padding-right: 450px;
+    padding: 13px 20px;
+    border: 1px solid #E37263;
+    border-radius: 7px;
+    background-color: #fff;
+    -webkit-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
+    color: #333;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn2:focus {
+  outline: 0 solid transparent;
+}
+.column:hover{
+  transform: scale(1.25);
+  /* opacity: 0.3; */
+}
+
+
+.btn2:hover {
+  background-color: #E37263;
+  transform: scale(1.05);
+}
+
+
+.btn2.actives {
+  background-color: #E37263;
+  color: white;
+  
+}
+
+/* Style the buttons */
+.btn3 {
+    margin-bottom: 10px;
+    padding-right: 450px;
+    padding: 13px 20px;
+    border: 1px solid #E37263;
+    border-radius: 7px;
+    background-color: #fff;
+    -webkit-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
+    color: #333;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn3:focus {
+  outline: 0 solid transparent;
+}
+/* .column:hover{
+  transform: scale(1.05);
+  opacity: 0.3;
+} */
+
+
+.btn3:hover {
+  background-color: #E37263;
+  transform: scale(1.05);
+}
+
+
+.btn3.actived {
+  background-color: #E37263;
+  color: white;
+  
+}
+h3{
+  font-size: 17px;
+  color: #888;
+  font-style: italic;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+h4{
+  font-size: 18px;
+    max-width: 768px;
+  max-height: 1024px;
+  margin: auto;
+  display: block;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #253646;
+  text-decoration: underline;
+}
+
+a{
+  color: #818181; 
+  display: block; 
+  font-size: 15px;
+  text-decoration: none;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1 style="font-family: Georgia, 'Times New Roman', Times, serif; color: #253646;">AnchorTO Resource hub</h1>
+<hr>
+
+<h3>Audience:</h3>
+<div id="myBtnContainer3">
+  <button class="btn3 actived" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn3" onclick="filterSelection('AnchorS')"> Anchor Support Tools</button>
+  <button class="btn3" onclick="filterSelection('SUPS')"> Supplier Diversity Tool</button>
+  <button class="btn3" onclick="filterSelection('VendS')"> Vendor/Supplier Support Tools</button>
+</div>
+<h3>Content/Theme Tags:</h3>
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('Toolkits-Guides')"> Toolkits and Guides</button>
+    <button class="btn" onclick="filterSelection('Policy-Resources')"> Policy Resources</button>
+    <button class="btn" onclick="filterSelection('ReportsCases')"> Reports & Case Studies</button>
+    <button class="btn" onclick="filterSelection('SupplierDiv')"> Supplier Diversity Resources</button>
+    <button class="btn" onclick="filterSelection('SocialValue')"> Social Value Resources</button>
+    <button class="btn" onclick="filterSelection('SecTr')"> Sector & Trade Resources</button>
+    <button class="btn" onclick="filterSelection('Mult')"> Multimedia</button>
+    <button class="btn" onclick="filterSelection('other')"> Other Procurement Resources</button>
+</div>
+<h3>Product Tags</h3>
+<div id="myBtnContainer2">
+    <button class="btn2 actives" onclick="filterSelections('Socval')"> Social Value Contracts Templates & Samples</button>
+    <button class="btn2" onclick="filterSelections('SocR')"> Social Value Rfx Support Tools</button>
+    <button class="btn2" onclick="filterSelections('Stat')"> Policy Statement And Framework</button>
+    <button class="btn2" onclick="filterSelection('DirE')"> Directory Of Social Procurement/Value Suppliers</button>
+    <button class="btn2" onclick="filterSelection('ComBen')"> Community Benefits Agreements</button>
+    <button class="btn2" onclick="filterSelection('IndS')"> Industry Specific Resources</button>
+    <button class="btn2" onclick="filterSelection('DirI')"> Directory of Industry Experts</button>
+    <button class="btn2" onclick="filterSelection('BroadP')"> Broader Public Service Fact Sheets</button>
+    <button class="btn2" onclick="filterSelection('TradeA')"> Trade Agreements Fact Sheets</button>
+    <button class="btn2" onclick="filterSelection('PolP')"> Policy and Procedures Toolkit</button>
+    <button class="btn2" onclick="filterSelection('PDF')"> PDF Slide Deck and/or Recordings</button>
+    <button class="btn2" onclick="filterSelection('SurveyQ')"> Survey Questionnaires</button>
+    <button class="btn2" onclick="filterSelection('SupQ')"> Supplier Diversity Questionnaire</button>
+    <button class="btn2" onclick="filterSelection('DivSupl')"> Diverse Supplier Councils</button>
+    <button class="btn2" onclick="filterSelection('SocvalR')"> Social Value Rfx Response Templates</button>
+    <button class="btn2" onclick="filterSelection('Divcoun')"> Diverse Supplier Councils</button>
+    <button class="btn2" onclick="filterSelection('Sust')"> Sustainability</button>
+    <button class="btn2" onclick="filterSelection('SocialEcon')"> Social Economy</button>
+    <button class="btn2" onclick="filterSelection('SuppDivs')"> Supplier Diversity</button>
+    <button class="btn2" onclick="filterSelection('SocEnt')"> Social Enterprises</button>
+</div>
+<hr>
+
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column AnchorS Toolkits-Guides PDF">
+    <div class="content">
+      <a href="https://www.buysocialcanada.com/learn/what-is-social-procurement/" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+      <h4>What is Social Procurement?</h4>
+      <p style="font-style: italic; color: #818181;">Social procurement is about using your existing purchasing to help shape inclusive, vibrant and healthy communities.</p>
+      <p style="font-style: italic; color: #121111;"><b>Buy Social Canada</b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Policy-Resources Stat DirE ">
+    <div class="content">
+      <a href="https://www.yorku.ca/procurement/vendors-of-record/social-procurement/" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement</h4>
+        <p style="font-style: italic; color: #818181;">This departmental policy will facilitate and support the inclusion of socio-economic measures in procurements to enhance best value in ...</p>
+        <p style="font-style: italic; color: #121111;"><b>York University
+    </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases SocialEcon SuppDivs ">
+    <div class="content">
+      <a href="https://ccednet-rcdec.ca/resources-tools/" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Canadian Community Economic Development Network (CCEDNet Resource Library</h4>
+        <p style="font-style: italic; color: #818181;">With our collection of resources and media, we seek to strengthen Community Economic Development knowledge and practice across Canada and around the world.</p>
+        <p style="font-style: italic; color: #121111;"><b>Canadian CED Network
+        </b></p>
+      </a>
+    </div>
+  </div>
+  
+  <div class="column AnchorS ReportsCases SocialEcon Soc101">
+    <div class="content">
+      <a href="https://bcspi.ca/what-is-social-procurement/" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>What is Social Procurement?</h4>
+        <p style="font-style: italic; color: #818181;">Social procurement is about using your existing purchasing to capture those impacts to achieve overarching institutional, governmental, or organizational goals ...
+        </p>
+        <p style="font-style: italic; color: #121111;"><b>British Columbia Social Procurement Initiative (BCSPI)
+        </b></p>
+        </p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Policy-Resources Stat">
+    <div class="content">
+      <a href="https://www.procurement.utoronto.ca/programs-and-services/social-procurement-pilot-program" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement - Pilot Program</h4>
+        <p style="font-style: italic; color: #818181;">Over the course of the Social Procurement Pilot Program, participating faculties and departments will have access to a Diverse Supplier Portal. The Portal is a directory of social enterprises, equity-deserving and local suppliers that provide a wide range of goods and services.
+          The pilot will allow for monitoring of the program prior to full community roll-out.
+        </p>
+        <p style="font-style: italic; color: #121111;"><b>University of Toronto</b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column SUPS SupplierDiv SupQ">
+    <div class="content">
+      <a href="https://utoronto.gob2g.com/" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Diverse Supplier Portal</h4>
+        <p style="font-style: italic; color: #818181;">A diverse supplier portal for University of Toronto 
+        </p>
+        <p style="font-style: italic; color: #121111;"><b>University of Toronto
+        </b></p>
+      </a>
+    </div>
+  </div>
+  
+  <div class="column AnchorS ReportsCases SocEnt ">
+    <div class="content">
+      <a href="https://www.oise.utoronto.ca/clsew/Research/Detailed_Project_Description.html" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Centre for Learning, Social Economy and Work (CLSEW) Social Procurement Project</h4>
+        <p style="font-style: italic; color: #818181;">Selling Social: Experiences of Social Enterprises with Social Procurement and Social Purchasing — Survey Reports</p>
+        <p style="font-style: italic; color: #121111;"><b>OISE, University of Toronto
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Policy-Resources Stat">
+    <div class="content">
+      <a href="https://www.tpsgc-pwgsc.gc.ca/app-acq/pas-posp-eng.html" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>PSPC Policy on social procurement - Buying and selling</h4>
+        <p style="font-style: italic; color: #818181;">A strategy that defines, in general terms, how a good, service or construction will: be procured to obtain best value; include, at the highest ...
+        </p>
+        <p style="font-style: italic; color: #121111;"><b>Public Services and Procurement Canada (PSPC)
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases Stat SocR">
+    <div class="content">
+      <a href="https://sustain.ubc.ca/sites/default/files/2017-41_%20Social%20Procurement%20State%20of%20Practice_Lupick.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "160px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Healthy City Scholars Program/UBC Sustainability - Social Procurement - State of Practice </h4>
+        <p style="font-style: italic; color: #818181;">This report was produced as part of the Healthy City Scholars Program, a partnership between the City of Vancouver and The University of British Columbia (UBC).  The Healthy City Scholar program is created with the spirit of social procurement in mind. </p>
+        <p style="font-style: italic; color: #121111;"><b>University of British Columbia (UBC)
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column SUPS SupplierDiv ReportsCases ">
+    <div class="content">
+      <a href="https://www.canada.ca/en/public-services-procurement/news/2022/01/government-of-canada-announces-plan-to-diversify-government-suppliers.html" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>PSPC Press Release -  Supplier Diversity Action Plan</h4>
+        <p style="font-style: italic; color: #818181;">As a cornerstone of the Plan, PSPC has developed a Policy on Social Procurement, articulating how the department will use procurement to reduce barriers, increase supplier diversity and enhance economic and social opportunities for underrepresented groups.</p>
+        <p style="font-style: italic; color: #121111;"><b>PSPC
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Policy-Resources Stat SuppDivs">
+    <div class="content">
+      <a href="https://www.canada.ca/en/public-services-procurement/news/2022/01/government-of-canada-announces-plan-to-diversify-government-suppliers.html" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement Program </h4>
+        <p style="font-style: italic; color: #818181;">The City of Toronto’s Social Procurement Program aims to create jobs and drive inclusive economic growth in the city. The program embeds supply chain diversity and workforce development initiatives in the City’s procurement processes.</p>
+        <p style="font-style: italic; color: #121111;"><b>City of Toronto
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Policy-Resources">
+    <div class="content">
+      <a href="https://www.edmonton.ca/business_economy/selling_to_the_city/sustainable-purchasing-policy" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Sustainable Procurement | City of Edmonton </h4>
+        <p style="font-style: italic; color: #818181;">The Sustainable Procurement Policy - C556B provides a framework for our purchasing activities in order to create intentional positive environmental, social, ...</p>
+        <p style="font-style: italic; color: #121111;"><b>City of Edmonton
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Toolkits-Guides PolP DirI">
+    <div class="content">
+      <a href="http://momentum.org/wp-content/uploads/2019/06/Social-Procurement-Brief-for-Alberta.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement in Alberta | Momentum</h4>
+        <p style="font-style: italic; color: #818181;">current review of Alberta's Government Procurement Policy, ... Social procurement leverages existing purchasing power to increase community benefits,.</p>
+        <p style="font-style: italic; color: #121111;"><b>MOMENTUM.ORG
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column VendS Toolkits-Guides">
+    <div class="content">
+      <a href="http://www.buysocialcanada.com/wp-content/uploads/Supplier-Guide-to-Social-Procurement-Nov-2020.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Supplier Guide to Social Procurement</h4>
+        <p style="font-style: italic; color: #818181;">The Supplier Guide is both a journey through the procurement ... RFX. DIRECT AWARD. SUB CONTRACT. CONSORTIA. COMMUNITY BENEFIT AGREEMENT.</p>
+        <p style="font-style: italic; color: #121111;"><b>Buy Social Canada
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases">
+    <div class="content">
+      <a href="https://bcspi.ca/social-procurement-resources/" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement Resources, Tools & Case Studies - BCSPI</h4>
+        <p style="font-style: italic; color: #818181;">BCSPI members get access to a variety of social procurement resources including templates, guides and case ... Social Value RFx Questionnaire Design Guide.</p>
+        <p style="font-style: italic; color: #121111;"><b>British Columbia Social Procurement Initiative (BCSPI)
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Mult PDF SocvalR">
+    <div class="content">
+      <a href="https://cipmm-icagm.ca/wp-content/uploads/Presentation_PDF/2019_NW_presentations/%233%20ENG_Exploring%20the%20What%2C%20Why%2C%20and%20How%20of%20Social%20Procurement%20Policy%20and%20Practice.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement: Why, What, and How</h4>
+        <p style="font-style: italic; color: #818181;">Social. Procurement? “Encouraging a shift towards procurement ... Examples of Possible Social Procurement Weighting ... Adjust RFX and desired supplier.</p>
+        <p style="font-style: italic; color: #121111;"><b>Buy Social Canada
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Toolkits-Guides PolP SocvalR">
+    <div class="content">
+      <a href="https://www.surrey.ca/sites/default/files/media/documents/SurreySocialProcurementGuide.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>City of Surrey Social Procurement Guide In accordance with ...</h4>
+        <p style="font-style: italic; color: #818181;">This Guide outlines how the City approaches the social procurement elements of objective setting, aligning</p>
+        <p style="font-style: italic; color: #121111;"><b>City of Surrey
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Policy-Resources SocvalR">
+    <div class="content">
+      <a href="https://vancouver.ca/files/cov/cba-bid-language-and-procurement-support-documents.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>CBA bid language and procurement support - City of Vancouver</h4>
+        <p style="font-style: italic; color: #818181;">CBA bid language and procurement support: Sample language and templates for RFx bids and tender documents</p>
+        <p style="font-style: italic; color: #121111;"><b>City of Vancouver
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Toolkits-Guides PolP">
+    <div class="content">
+      <a href="https://www.buyingfor.vic.gov.au/social-procurement-toolkit" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social procurement toolkit | Buying for Victoria</h4>
+        <p style="font-style: italic; color: #818181;">Social procurement toolkit. Find templates and related documents that help government buyers undertake social procurement.</p>
+        <p style="font-style: italic; color: #121111;"><b>Buying for Victoria/The State of Victoria
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Toolkits-Guides PolP Stat">
+    <div class="content">
+      <a href="https://socialpurpose.ca/summit-resources/" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>United Way Social Purpose Institute</h4>
+        <p style="font-style: italic; color: #818181;">On this page, you can access valuable resources, tools, and publications that were used during the Summit.</p>
+        <p style="font-style: italic; color: #121111;"><b>United Way Social Purpose Institute
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Toolkits-Guides">
+    <div class="content">
+      <a href="https://grow.g21.com.au/resources-support/grow-social-procurement-resources" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement Toolkit - GROW G21</h4>
+        <p style="font-style: italic; color: #818181;">The Toolkit is a series of innovative tools, best practice examples and documents to support social procurement and local economic development in the G21 ...</p>
+        <p style="font-style: italic; color: #121111;"><b>GROW (Victoria)
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Toolkits-Guides PolP">
+    <div class="content">
+      <a href="https://sustainabilityadvantage.com/sp/toolkit/" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Toolkit - Sustainability Advantage</h4>
+        <p style="font-style: italic; color: #818181;">The free, open-source Sustainable Procurement Toolkit contains templates and tools that help implement three critical aspects of a sustainable procurement ...</p>
+        <p style="font-style: italic; color: #121111;"><b>Sustainability Advantage
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Toolkits-Guides Stat PolP">
+    <div class="content">
+      <a href="https://heightpm.com/s/Auckland-Council-HW-Height-Social-Procurement-Toolkit-4pp.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>The Social Procurement Toolkit - Height</h4>
+        <p style="font-style: italic; color: #818181;">The Social Procurement Toolkit provides a practical way to embed and deliver social outcomes in contracts and projects to help address these challenges.</p>
+        <p style="font-style: italic; color: #121111;"><b>Auckland Council
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases">
+    <div class="content">
+      <a href="https://www.vendorpanel.com/insights/biggest-barriers-social-procurement-2022" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Seven Biggest Barriers to Social Procurement in 2022</h4>
+        <p style="font-style: italic; color: #818181;">A report on the largest obstacles organisations face when engaging in social procurement.</p>
+        <p style="font-style: italic; color: #121111;"><b>Vendor Panel
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Toolkits-Guides PolP">
+    <div class="content">
+      <a href="https://www.localgovernment.vic.gov.au/strengthening-councils/procurement/social-procurement" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social procurement - Local Government Victoria</h4>
+        <p style="font-style: italic; color: #818181;">Local Government Victoria provides a Guide to Social Procurement and a toolkit to assist Victorian councils to deliver effective social outcomes through ...</p>
+        <p style="font-style: italic; color: #121111;"><b>Local Government Victoria
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases">
+    <div class="content">
+      <a href="https://sustain.ubc.ca/sites/default/files/2017-41_%20Social%20Procurement%20State%20of%20Practice_Lupick.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement - State of Practice - UBC Sustainability</h4>
+        <p style="font-style: italic; color: #818181;">Potential benefits of a social procurement framework to the City are ...</p>
+        <p style="font-style: italic; color: #121111;"><b>City of Vancouver and The University of British Columbia (UBC)
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Toolkits-Guides PolP">
+    <div class="content">
+      <a href="https://base.socioeco.org/docs/buy-social-toolkit.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Buy Social: A practical guide to socially responsible public procurement</h4>
+        <p style="font-style: italic; color: #818181;">This toolkit has been produced by The Strategic Investment Board (SIB) to assist staff and colleagues in all areas in which we work to adopt a ‘Buy Social’ </p>
+        <p style="font-style: italic; color: #121111;"><b>Strategic Investment Board Limited
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Policy-Resources Stat">
+    <div class="content">
+      <a href="https://www.tpsgc-pwgsc.gc.ca/app-acq/pas-posp-eng.html" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>PSPC Policy on social procurement</h4>
+        <p style="font-style: italic; color: #818181;">Establish the framework for PWGSC social procurement policy instruments, programs and social procurement small business set-aside programs ...</p>
+        <p style="font-style: italic; color: #121111;"><b>Public Services and Procurement Canada (PSPC)
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS Policy-Resources Stat">
+    <div class="content">
+      <a href="https://winnipeg.ca/matmgt/pdfs/SocialProcurement-Framework.pdf" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>City of Winnipeg Social Procurement Framework</h4>
+        <p style="font-style: italic; color: #818181;">The purpose of the Social Procurement Framework is to activate the social and Indigenous components of Winnipeg's Sustainable Procurement Program. In this way, ...</p>
+        <p style="font-style: italic; color: #121111;"><b>City of Winnipeg
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column SUPS SupplierDiv SupQ">
+    <div class="content">
+      <a href="https://vancouver.ca/doing-business/social-procurement-framework.aspx" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social, Indigenous, and diverse businesses | City of Vancouver</h4>
+        <p style="font-style: italic; color: #818181;">Social value businesses are invited to provide information on the types of goods and services they provide and their capacity to deliver.</p>
+        <p style="font-style: italic; color: #121111;"><b>City of Vancouver
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases">
+    <div class="content">
+      <a href="https://www.buysocialcanada.com/posts/resources/city-of-calgary-social-procurement-case-study/" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>City of Calgary Social Procurement Case Study</h4>
+        <p style="font-style: italic; color: #818181;">This case study details the process Buy Social Canada took in collaboration with the City of Calgary to add social value considerations to ...</p>
+        <p style="font-style: italic; color: #121111;"><b>Buy Social Canada
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases">
+    <div class="content">
+      <a href="https://www.tamarackcommunity.ca/library/edmonton-s-social-procurement-policy-increases-economic-opportunity-for-all" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Edmonton's social procurement policy increases economic ...</h4>
+        <p style="font-style: italic; color: #818181;">This case study explores the process by which EndPovertyEdmonton is helping to integrate social procurement into how the community does business.</p>
+        <p style="font-style: italic; color: #121111;"><b>Tamarack Institute
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases">
+    <div class="content">
+      <a href="https://buyingfor.vic.gov.au/sites/default/files/2018-08/Case-Studies-and-Highlights-report_0.PDF" target="_blank">
+        <img src="/Images/PDF.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Victoria's social procurement case studies and highlights</h4>
+        <p style="font-style: italic; color: #818181;">case studies and highlights. Supporting the implementation of Victoria's. Social Procurement Framework. Building a fair, inclusive and sustainable.</p>
+        <p style="font-style: italic; color: #121111;"><b>The State of Victoria
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases">
+    <div class="content">
+      <a href="https://sustainable-procurement.org/case-studies/" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Case Studies on Sustainable and Circular Procurement</h4>
+        <p style="font-style: italic; color: #818181;">A selection of representative case studies that contain inspiration and guidance on how to implement sustainable, circular, and innovation procurement in relevant sectors.</p>
+        <p style="font-style: italic; color: #121111;"><b>Sustainable Procurement Platform
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases">
+    <div class="content">
+      <a href="https://www.noharm-uscanada.org/issues/europe/sustainable-procurement-case-studies" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Sustainable Procurement Case Studies</h4>
+        <p style="font-style: italic; color: #818181;">Sustainable Procurement Case Studies ... Green purchasing is not something new. It boils down to understanding the environmental impact of what you buy, and ...</p>
+        <p style="font-style: italic; color: #121111;"><b>Health Care Without Harm
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS ReportsCases">
+    <div class="content">
+      <a href="https://opo-boa.gc.ca/diversite-diversity-eng.html" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social procurement: A study on supplier diversity and workforce development benefits</h4>
+        <p style="font-style: italic; color: #818181;">The purpose of this study was to provide an overview of key success factors for organizations seeking to adopt social procurement practices, specifically with regard to increasing supplier diversity and integrating workforce development benefitsFootnotei into their procurement processes</p>
+        <p style="font-style: italic; color: #121111;"><b>The Office of the Procurement Ombudsman (OPO)
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS SocialValue Stat'">
+    <div class="content">
+      <a href="https://djpr.vic.gov.au/about-us/overview/tenders-quotes-contracts/social-procurement-framework" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement Framework | Tenders, quotes and contracts</h4>
+        <p style="font-style: italic; color: #818181;">Social procurement is when organisations use their buying power to generate social value above and beyond the value of the goods, ...</p>
+        <p style="font-style: italic; color: #121111;"><b>State of Victoria
+        </b></p>
+      </a>
+    </div>
+  </div>
+  <div class="column AnchorS SocialValue SurveyQ SupQ">
+    <div class="content">
+      <a href="https://www.rmwb.ca/en/permits-and-development/social-procurement-in-the-rmwb.aspx" target="_blank">
+        <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
+        <h4>Social Procurement - Regional Municipality of Wood Buffalo</h4>
+        <p style="font-style: italic; color: #818181;">In a commitment to continuously improve the Social Procurement Program, a multi-stakeholder Social Procurement Working Group is being established to provide ...</p>
+        <p style="font-style: italic; color: #121111;"><b>Regional Municipality of Wood Buffalo
+        </b></p>
+      </a>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+filterSelections("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function filterSelections(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+// Add active class to the second  button (highlight it)
+var btnContainer2 = document.getElementById("myBtnContainer2");
+var btns2 = btnContainer2.getElementsByClassName("btn2");
+for (var i = 0; i < btns2.length; i++) {
+  btns2[i].addEventListener("click", function(){
+    var current2 = document.getElementsByClassName("actives");
+    current2[0].className = current2[0].className.replace(" actives", "");
+    this.className += " actives";
+  });
+}
+
+// Add active class to the second  button (highlight it)
+var btnContainer3 = document.getElementById("myBtnContainer3");
+var btns3 = btnContainer3.getElementsByClassName("btn3");
+for (var i = 0; i < btns3.length; i++) {
+  btns3[i].addEventListener("click", function(){
+    var current3 = document.getElementsByClassName("actived");
+    current3[0].className = current3[0].className.replace(" actived", "");
+    this.className += " actived";
+  });
+}
+</script>
+
+</body>
+</html>
