@@ -78,6 +78,7 @@ h1 {
     font-weight: 500;
     text-align: center;
     text-decoration: none;
+    font-family: KXALCC+Helvetica
 }
 
 .btn:focus {
@@ -113,6 +114,7 @@ h1 {
     font-weight: 500;
     text-align: center;
     text-decoration: none;
+    font-family: KXALCC+Helvetica
 }
 
 .btn2:focus {
@@ -153,6 +155,7 @@ h1 {
     font-weight: 500;
     text-align: center;
     text-decoration: none;
+    font-family: KXALCC+Helvetica
 }
 
 .btn3:focus {
@@ -202,6 +205,17 @@ a{
   text-decoration: none;
 }
 
+#myInput {
+  background-image: url('Images/search.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  background-color: #f1f1f1;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
 
 </style>
 </head>
@@ -212,6 +226,7 @@ a{
 
 <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; color: #216274;">AnchorTO Resource hub</h1>
 <hr>
+<input type="text" id="myInput" onkeyup="searchFunction()" placeholder="SEARCH FOR TITLES.." title="Type in a name"  >
 
 <h3>Audience:</h3>
 <div id="myBtnContainer3">
@@ -235,9 +250,9 @@ a{
 <h3>Product Tags</h3>
 <div id="myBtnContainer2">
     <button class="btn2 actives" onclick="filterSelection('all')"> Show all</button>
-    <button class="btn2" onclick="filterSelections('Socval')"> Social Value Contracts Templates & Samples</button>
-    <button class="btn2" onclick="filterSelections('SocR')"> Social Value Rfx Support Tools</button>
-    <button class="btn2" onclick="filterSelections('Stat')"> Policy Statement And Framework</button>
+    <button class="btn2" onclick="filterSelection('Socval')"> Social Value Contracts Templates & Samples</button>
+    <button class="btn2" onclick="filterSelection('SocR')"> Social Value Rfx Support Tools</button>
+    <button class="btn2" onclick="filterSelection('Stat')"> Policy Statement And Framework</button>
     <button class="btn2" onclick="filterSelection('DirE')"> Directory Of Social Procurement/Value Suppliers</button>
     <button class="btn2" onclick="filterSelection('ComBen')"> Community Benefits Agreements</button>
     <button class="btn2" onclick="filterSelection('IndS')"> Industry Specific Resources</button>
@@ -261,7 +276,7 @@ a{
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="column AnchorS Toolkits-Guides PDF">
+  <div class="column AnchorS Toolkits-Guides PDF social">
     <div class="content">
       <a href="https://www.buysocialcanada.com/learn/what-is-social-procurement/" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -271,7 +286,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Policy-Resources Stat DirE ">
+  <div class="column AnchorS Policy-Resources Stat DirE social ">
     <div class="content">
       <a href="https://www.yorku.ca/procurement/vendors-of-record/social-procurement/" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -294,7 +309,7 @@ a{
     </div>
   </div>
   
-  <div class="column AnchorS ReportsCases SocialEcon Soc101">
+  <div class="column AnchorS ReportsCases SocialEcon Soc101 social">
     <div class="content">
       <a href="https://bcspi.ca/what-is-social-procurement/" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -307,7 +322,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Policy-Resources Stat">
+  <div class="column AnchorS Policy-Resources Stat social">
     <div class="content">
       <a href="https://www.procurement.utoronto.ca/programs-and-services/social-procurement-pilot-program" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -377,7 +392,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Policy-Resources Stat SuppDivs">
+  <div class="column AnchorS Policy-Resources Stat SuppDivs social">
     <div class="content">
       <a href="https://www.canada.ca/en/public-services-procurement/news/2022/01/government-of-canada-announces-plan-to-diversify-government-suppliers.html" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -399,7 +414,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Toolkits-Guides PolP DirI">
+  <div class="column AnchorS Toolkits-Guides PolP DirI social">
     <div class="content">
       <a href="http://momentum.org/wp-content/uploads/2019/06/Social-Procurement-Brief-for-Alberta.pdf" target="_blank">
         <img src="/Images/PDF.png" width= "190px" height="190px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -410,7 +425,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column VendS Toolkits-Guides">
+  <div class="column VendS Toolkits-Guides social">
     <div class="content">
       <a href="http://www.buysocialcanada.com/wp-content/uploads/Supplier-Guide-to-Social-Procurement-Nov-2020.pdf" target="_blank">
         <img src="/Images/PDF.png" width= "190px" height="190px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -421,7 +436,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS ReportsCases">
+  <div class="column AnchorS ReportsCases social">
     <div class="content">
       <a href="https://bcspi.ca/social-procurement-resources/" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -432,7 +447,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Mult PDF SocvalR">
+  <div class="column AnchorS Mult PDF SocvalR social">
     <div class="content">
       <a href="https://cipmm-icagm.ca/wp-content/uploads/Presentation_PDF/2019_NW_presentations/%233%20ENG_Exploring%20the%20What%2C%20Why%2C%20and%20How%20of%20Social%20Procurement%20Policy%20and%20Practice.pdf" target="_blank">
         <img src="/Images/PDF.png" width= "190px" height="190px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -443,7 +458,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Toolkits-Guides PolP SocvalR">
+  <div class="column AnchorS Toolkits-Guides PolP SocvalR social">
     <div class="content">
       <a href="https://www.surrey.ca/sites/default/files/media/documents/SurreySocialProcurementGuide.pdf" target="_blank">
         <img src="/Images/PDF.png" width= "190px" height="190px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -465,7 +480,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Toolkits-Guides PolP">
+  <div class="column AnchorS Toolkits-Guides PolP social">
     <div class="content">
       <a href="https://www.buyingfor.vic.gov.au/social-procurement-toolkit" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -476,7 +491,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Toolkits-Guides PolP Stat">
+  <div class="column AnchorS Toolkits-Guides PolP Stat social">
     <div class="content">
       <a href="https://socialpurpose.ca/summit-resources/" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -487,7 +502,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Toolkits-Guides">
+  <div class="column AnchorS Toolkits-Guides social">
     <div class="content">
       <a href="https://grow.g21.com.au/resources-support/grow-social-procurement-resources" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -509,7 +524,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Toolkits-Guides Stat PolP">
+  <div class="column AnchorS Toolkits-Guides Stat PolP social">
     <div class="content">
       <a href="https://heightpm.com/s/Auckland-Council-HW-Height-Social-Procurement-Toolkit-4pp.pdf" target="_blank">
         <img src="/Images/PDF.png" width= "190px" height="190px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -531,7 +546,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Toolkits-Guides PolP">
+  <div class="column AnchorS Toolkits-Guides PolP social">
     <div class="content">
       <a href="https://www.localgovernment.vic.gov.au/strengthening-councils/procurement/social-procurement" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -542,7 +557,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS ReportsCases">
+  <div class="column AnchorS ReportsCases social">
     <div class="content">
       <a href="https://sustain.ubc.ca/sites/default/files/2017-41_%20Social%20Procurement%20State%20of%20Practice_Lupick.pdf" target="_blank">
         <img src="/Images/PDF.png" width= "190px" height="190px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -553,7 +568,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Toolkits-Guides PolP">
+  <div class="column AnchorS Toolkits-Guides PolP social">
     <div class="content">
       <a href="https://base.socioeco.org/docs/buy-social-toolkit.pdf" target="_blank">
         <img src="/Images/PDF.png" width= "190px" height="190px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -564,7 +579,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Policy-Resources Stat">
+  <div class="column AnchorS Policy-Resources Stat social">
     <div class="content">
       <a href="https://www.tpsgc-pwgsc.gc.ca/app-acq/pas-posp-eng.html" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -575,7 +590,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS Policy-Resources Stat">
+  <div class="column AnchorS Policy-Resources Stat social">
     <div class="content">
       <a href="https://winnipeg.ca/matmgt/pdfs/SocialProcurement-Framework.pdf" target="_blank">
         <img src="/Images/PDF.png" width= "190px" height="190px"style="display: block; text-align: center;" alt="University of toronto" >
@@ -586,7 +601,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column SUPS SupplierDiv SupQ">
+  <div class="column SUPS SupplierDiv SupQ social">
     <div class="content">
       <a href="https://vancouver.ca/doing-business/social-procurement-framework.aspx" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -597,7 +612,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS ReportsCases">
+  <div class="column AnchorS ReportsCases social">
     <div class="content">
       <a href="https://www.buysocialcanada.com/posts/resources/city-of-calgary-social-procurement-case-study/" target="_blank">
         <img src="/Images/PDF.png"width= "190px" height="190px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -608,7 +623,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS ReportsCases">
+  <div class="column AnchorS ReportsCases social">
     <div class="content">
       <a href="https://www.tamarackcommunity.ca/library/edmonton-s-social-procurement-policy-increases-economic-opportunity-for-all" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -619,7 +634,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS ReportsCases">
+  <div class="column AnchorS ReportsCases social">
     <div class="content">
       <a href="https://buyingfor.vic.gov.au/sites/default/files/2018-08/Case-Studies-and-Highlights-report_0.PDF" target="_blank">
         <img src="/Images/PDF.png" width= "190px" height="190px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -652,7 +667,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS ReportsCases">
+  <div class="column AnchorS ReportsCases social">
     <div class="content">
       <a href="https://opo-boa.gc.ca/diversite-diversity-eng.html" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -663,7 +678,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS SocialValue Stat'">
+  <div class="column AnchorS SocialValue Stat social">
     <div class="content">
       <a href="https://djpr.vic.gov.au/about-us/overview/tenders-quotes-contracts/social-procurement-framework" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -674,7 +689,7 @@ a{
       </a>
     </div>
   </div>
-  <div class="column AnchorS SocialValue SurveyQ SupQ">
+  <div class="column AnchorS SocialValue SurveyQ SupQ social">
     <div class="content">
       <a href="https://www.rmwb.ca/en/permits-and-development/social-procurement-in-the-rmwb.aspx" target="_blank">
         <img src="/Images/weblink.png" width= "120px" style="display: block; text-align: center;" alt="University of toronto" >
@@ -693,7 +708,25 @@ a{
 
 <script>
 filterSelection("all")
-filterSelections("all")
+
+function searchFunction(){
+  var input, filter, x, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  x = document.getElementsByClassName("column");
+  for (i = 0; i < x.length; i++) {
+    a = x[i].getElementsByTagName("h4")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      w3AddClass(x[i], "show");
+    }
+    else {
+      w3RemoveClass(x[i], "show");
+    }
+  }
+
+}
+
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("column");
@@ -704,15 +737,6 @@ function filterSelection(c) {
   }
 }
 
-function filterSelections(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
 
 function w3AddClass(element, name) {
   var i, arr1, arr2;
