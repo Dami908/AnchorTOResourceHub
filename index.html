@@ -346,20 +346,76 @@ p{
   padding: 16px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+.header {
+      background: #216274;
+      color: white;
+      padding: 40px;
 }
 
-/* Header/Logo Title */
-.header {
-  padding: 60px;
-  text-align: center;
-  background: #216274;
-  color: white;
-  font-size: 30px;
+.header h1 {
+      text-align: left;
+      padding-right: 70px;
+      font-size: 30px;
+    }
+
+.header p {
+      text-align: left;
+      padding-bottom: 1;
+      font-size: small;
 }
+.header th {
+      font-size: small;
+      text-align: left;
+      padding-top: 30px;
+      padding-left: 60px;
+    }
+
+.header button {
+  background-color: #f1f1f1;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 50%; 
+  height: 55px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: Merriweather;
+  border: 1px solid #216274;
+  border-radius: 35px;
+  color: #333;
+  text-align: center;
+    }
+
+    @media screen and (max-width: 450px) {
+      .header {
+        padding: 30px;
+        font-size: 20px;
+      }
+
+      .header h1 {
+        font-size: 10px;
+        text-decoration: underline;
+      }
+
+      .header p {
+        font-size: 10px;
+      }
+
+      .header th {
+        padding-top: 15px;
+        padding-left: 30px;
+      }
+
+      .header button {
+        font-size: 10px;
+        display: none;
+      }
+    }
+
+/* Header/Logo Title */
+
 
 </style>
 </head>
@@ -374,19 +430,23 @@ p{
 <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; color: #216274;">ANCHORTO RESOURCE HUB</h1>
 <hr>
 <div class="header">
-  <table style="width:100%">
+  <table style="width:100%;">
     <tr>
-      <th style="width:69%"><h1 style="text-align: left; padding-right: 70px;">Resource Library<p style="text-align: left; padding-bottom: 1; font-size:small; ">In this resource library you will find examples of social enterprise policies, strategies, 
-        and studies that capture national, regional, and local action on social enterprise development. 
-        This is the most extensive collection of social enterprise resources globally and the collection is always expanding.</p></h1></th>
-      <th style="font-size: small; text-align: left; padding-top: 30px; padding-left: 60px;">Contribute to our library<p style="font-size: small; text-align: left;">If you have or know of any new relevant policy documents you would like to see included, please get in touch.</p><button class="openbtn2" onclick="">Contact Us</button></th> 
+      <th style="width:69%">
+        <h1>Resource Library</h1>
+        <p>In this resource library you will find examples of social enterprise policies, strategies, and studies that capture national, regional, and local action on social enterprise development. This is the most extensive collection of social enterprise resources globally and the collection is always expanding.</p>
+      </th>
+      <th>
+        <p>Contribute to our library</p>
+        <p>If you have or know of any new relevant policy documents you would like to see included, please get in touch.</p>
+        <button class="openbtn2">Contact Us</button>
+      </th>
     </tr>
-  </table>  
+  </table>
 </div>
 <p></p>
 <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="SEARCH FOR TITLES.." title="Type in a name"  >
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
 <button class="collapsible">Audience</button>
 <div class="contente" id="myBtnContainer3">
   <button class="btn3 actived" onclick="filterSelection('all')"> Show all</button>
@@ -433,10 +493,7 @@ p{
     <button class="btn2" onclick="filterSelection('ComBens')"> Community Benefits Framework</button>
     <p></p>
 </div>
-</div>
-<div id="main">
-  <button class="openbtn" onclick="openNav()">Filter by Tags</button>
-</div>  
+
 
 
 <hr>
