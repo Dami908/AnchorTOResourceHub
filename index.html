@@ -428,6 +428,16 @@ p{
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4JGT5Z"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Welcome to my website!</p>
+    </div>
+  
+  </div>
 <!-- MAIN (Center website) -->
 <div class="main">
 
@@ -1259,6 +1269,9 @@ function w3RemoveClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
+window.onload = function() {
+  alert("If you have or know of any new relevant policy documents you would like to see included, please get in touch.");
+};
 
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
