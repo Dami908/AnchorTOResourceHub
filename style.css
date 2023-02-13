@@ -1,0 +1,399 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+  }
+  
+  /* Center website */
+  .main {
+    max-width: 1250px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+    font-family: Raleway; 
+  }
+  
+  .row {
+    margin: 10px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float:left;
+    width: 103.33%; /*103.33*/
+    display: none; /* Hide all elements by default */
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display:grid;
+  }
+  
+  /* Style the buttons */
+  .btn {
+      margin-bottom: 10px;
+      padding-right: 450px;
+      padding: 13px 20px;
+      border: 1px solid #216274;
+      border-radius: 7px;
+      background-color: #fff;
+      -webkit-transition: background-color 300ms ease;
+      transition: background-color 300ms ease;
+      color: #333;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      font-family: Merriweathers;
+  }
+  
+  .btn:focus {
+    outline: 0 solid transparent;
+  }
+  
+  
+  .btn:hover {
+    background-color: #216274;
+    transform: scale(1.05);
+    color: white;
+  }
+  
+  
+  .btn.active {
+    background-color: #216274;
+    color: white;
+    
+  }
+  /* Style the buttons */
+  .btn2 {
+      margin-bottom: 10px;
+      padding-right: 450px;
+      padding: 13px 20px;
+      border: 1px solid #216274;
+      border-radius: 7px;
+      background-color: #fff;
+      -webkit-transition: background-color 300ms ease;
+      transition: background-color 300ms ease;
+      color: #333;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      font-family: Merriweathers;
+  }
+  
+  .btn2:focus {
+    outline: 0 solid transparent;
+  }
+  .column:hover{
+    transform: scale(1.05);
+    /* opacity: 0.3; */
+  }
+  
+  
+  .btn2:hover {
+    background-color: #216274;
+    transform: scale(1.05);
+    color: white;
+  }
+  
+  
+  .btn2.actives {
+    background-color: #216274;
+    color: white;
+    
+  }
+  
+  /* Style the buttons */
+  .btn3 {
+      margin-bottom: 10px;
+      padding-right: 450px;
+      padding: 13px 20px;
+      border: 1px solid #216274;
+      border-radius: 7px;
+      background-color: #fff;
+      -webkit-transition: background-color 300ms ease;
+      transition: background-color 300ms ease;
+      color: #333;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      font-family: Merriweathers;
+  }
+  
+  .btn3:focus {
+    outline: 0 solid transparent;
+  }
+  /* .column:hover{
+    transform: scale(1.05);
+    opacity: 0.3;
+  } */
+  
+  
+  .btn3:hover {
+    background-color: #216274;
+    transform: scale(1.05);
+    color: white;
+  }
+  
+  
+  .btn3.actived {
+    background-color: #216274;
+    color: white;
+    
+  }
+  h3{
+    font-size: 17px;
+    color: #888;
+    padding-top: 3px;
+    padding-bottom: 10px;
+    font-family: Merriweathers
+  }
+  @font-face { font-family: Merriweather; src: url('Merriweather-Light.ttf'); } 
+  @font-face { font-family: Merriweathers; src: url('Merriweather-Bold.ttf'); } 
+  @font-face { font-family: Raleway; src: url('Raleway-Bold.ttf'); } 
+  h4{
+    font-size: 18px;
+      max-width: 768px;
+    max-height: 1024px;
+    margin: auto;
+    display: block;
+    color: #216274;
+    text-decoration: underline;
+    font-family: Merriweathers;
+  }
+  
+  a{
+    color: #818181; 
+    display: block; 
+    font-size: 15px;
+    text-decoration: none;
+  }
+  
+  #myInput {
+    background-image: url('Images/search.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  
+  p{
+    font-family: Merriweather
+  }
+  
+  .collapsible {
+    background-color: #f1f1f1;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%; 
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    font-family: Merriweather;
+    border: 1px solid #216274;
+    border-radius: 7px;
+    color: #333;
+  }
+  
+  /* .active, .collapsible:hover {
+    transform: scale(1.05);
+  } */
+  
+  .contente {
+    padding: 0 18px;
+    padding-top: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    float: left;
+  }
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 70px;
+    font-family: Merriweather;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    background-color: #f1f1f1;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%; 
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    font-family: Merriweather;
+    border: 1px solid #216274;
+    border-radius: 7px;
+    color: #333;
+  }
+  .openbtn2 {
+    background-color: #f1f1f1;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%; 
+    height: 55px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-family: Merriweather;
+    border: 1px solid #216274;
+    border-radius: 35px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* .openbtn:hover {
+    background-color: #444;
+  } */
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  .header {
+        background: #216274;
+        color: white;
+        padding: 40px;
+  }
+  
+  .header h1 {
+        text-align: left;
+        padding-right: 70px;
+        font-size: 30px;
+      }
+  
+  .header p {
+        text-align: left;
+        padding-bottom: 1;
+        font-size: small;
+  }
+  .header th {
+        font-size: small;
+        text-align: left;
+        padding-top: 30px;
+        padding-left: 60px;
+      }
+  
+  .header button {
+    background-color: #f1f1f1;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%; 
+    height: 55px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-family: Merriweather;
+    border: 1px solid #216274;
+    border-radius: 35px;
+    color: #333;
+    text-align: center;
+      }
+  
+      @media screen and (max-width: 450px) {
+        .header {
+          padding: 30px;
+          font-size: 20px;
+        }
+  
+        .header h1 {
+          font-size: 8px;
+          text-decoration: underline;
+        }
+  
+        .header p {
+          font-size: 8px;
+        }
+  
+        .header th {
+          padding-top: 15px;
+          padding-left: 30px;
+        }
+  
+        .header button {
+          font-size: 13px;
+          width: 100%;
+          height: 70px;
+          text-align: center;
+          padding-left: 17px;
+          border-radius: 10px;
+        }
+      }
+  
+  /* Header/Logo Title */
+  

@@ -19,406 +19,9 @@
   <!-- End Google Tag Manager -->
 <title >AnchorTO Resource Hub</title>
 <link rel="icon" href="/Images/AnchorTO.jpg">
+<link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial;
-}
-
-/* Center website */
-.main {
-  max-width: 1250px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-  font-family: Raleway; 
-}
-
-.row {
-  margin: 10px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float:left;
-  width: 103.33%; /*103.33*/
-  display: none; /* Hide all elements by default */
-}
-
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-}
-
-/* The "show" class is added to the filtered elements */
-.show {
-  display:grid;
-}
-
-/* Style the buttons */
-.btn {
-    margin-bottom: 10px;
-    padding-right: 450px;
-    padding: 13px 20px;
-    border: 1px solid #216274;
-    border-radius: 7px;
-    background-color: #fff;
-    -webkit-transition: background-color 300ms ease;
-    transition: background-color 300ms ease;
-    color: #333;
-    font-size: 14px;
-    line-height: 14px;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    font-family: Merriweathers;
-}
-
-.btn:focus {
-  outline: 0 solid transparent;
-}
-
-
-.btn:hover {
-  background-color: #216274;
-  transform: scale(1.05);
-  color: white;
-}
-
-
-.btn.active {
-  background-color: #216274;
-  color: white;
-  
-}
-/* Style the buttons */
-.btn2 {
-    margin-bottom: 10px;
-    padding-right: 450px;
-    padding: 13px 20px;
-    border: 1px solid #216274;
-    border-radius: 7px;
-    background-color: #fff;
-    -webkit-transition: background-color 300ms ease;
-    transition: background-color 300ms ease;
-    color: #333;
-    font-size: 14px;
-    line-height: 14px;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    font-family: Merriweathers;
-}
-
-.btn2:focus {
-  outline: 0 solid transparent;
-}
-.column:hover{
-  transform: scale(1.05);
-  /* opacity: 0.3; */
-}
-
-
-.btn2:hover {
-  background-color: #216274;
-  transform: scale(1.05);
-  color: white;
-}
-
-
-.btn2.actives {
-  background-color: #216274;
-  color: white;
-  
-}
-
-/* Style the buttons */
-.btn3 {
-    margin-bottom: 10px;
-    padding-right: 450px;
-    padding: 13px 20px;
-    border: 1px solid #216274;
-    border-radius: 7px;
-    background-color: #fff;
-    -webkit-transition: background-color 300ms ease;
-    transition: background-color 300ms ease;
-    color: #333;
-    font-size: 14px;
-    line-height: 14px;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    font-family: Merriweathers;
-}
-
-.btn3:focus {
-  outline: 0 solid transparent;
-}
-/* .column:hover{
-  transform: scale(1.05);
-  opacity: 0.3;
-} */
-
-
-.btn3:hover {
-  background-color: #216274;
-  transform: scale(1.05);
-  color: white;
-}
-
-
-.btn3.actived {
-  background-color: #216274;
-  color: white;
-  
-}
-h3{
-  font-size: 17px;
-  color: #888;
-  padding-top: 3px;
-  padding-bottom: 10px;
-  font-family: Merriweathers
-}
-@font-face { font-family: Merriweather; src: url('Merriweather-Light.ttf'); } 
-@font-face { font-family: Merriweathers; src: url('Merriweather-Bold.ttf'); } 
-@font-face { font-family: Raleway; src: url('Raleway-Bold.ttf'); } 
-h4{
-  font-size: 18px;
-    max-width: 768px;
-  max-height: 1024px;
-  margin: auto;
-  display: block;
-  color: #216274;
-  text-decoration: underline;
-  font-family: Merriweathers;
-}
-
-a{
-  color: #818181; 
-  display: block; 
-  font-size: 15px;
-  text-decoration: none;
-}
-
-#myInput {
-  background-image: url('Images/search.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  background-color: #f1f1f1;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-p{
-  font-family: Merriweather
-}
-
-.collapsible {
-  background-color: #f1f1f1;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%; 
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 25px;
-  font-family: Merriweather;
-  border: 1px solid #216274;
-  border-radius: 7px;
-  color: #333;
-}
-
-/* .active, .collapsible:hover {
-  transform: scale(1.05);
-} */
-
-.contente {
-  padding: 0 18px;
-  padding-top: 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-  float: left;
-}
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #f1f1f1;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 70px;
-  font-family: Merriweather;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.openbtn {
-  background-color: #f1f1f1;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%; 
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 25px;
-  font-family: Merriweather;
-  border: 1px solid #216274;
-  border-radius: 7px;
-  color: #333;
-}
-.openbtn2 {
-  background-color: #f1f1f1;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 50%; 
-  height: 55px;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  font-family: Merriweather;
-  border: 1px solid #216274;
-  border-radius: 35px;
-  color: #333;
-  text-align: center;
-}
-
-/* .openbtn:hover {
-  background-color: #444;
-} */
-
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-}
-
-.header {
-      background: #216274;
-      color: white;
-      padding: 40px;
-}
-
-.header h1 {
-      text-align: left;
-      padding-right: 70px;
-      font-size: 30px;
-    }
-
-.header p {
-      text-align: left;
-      padding-bottom: 1;
-      font-size: small;
-}
-.header th {
-      font-size: small;
-      text-align: left;
-      padding-top: 30px;
-      padding-left: 60px;
-    }
-
-.header button {
-  background-color: #f1f1f1;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 50%; 
-  height: 55px;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  font-family: Merriweather;
-  border: 1px solid #216274;
-  border-radius: 35px;
-  color: #333;
-  text-align: center;
-    }
-
-    @media screen and (max-width: 450px) {
-      .header {
-        padding: 30px;
-        font-size: 20px;
-      }
-
-      .header h1 {
-        font-size: 8px;
-        text-decoration: underline;
-      }
-
-      .header p {
-        font-size: 8px;
-      }
-
-      .header th {
-        padding-top: 15px;
-        padding-left: 30px;
-      }
-
-      .header button {
-        font-size: 13px;
-        width: 100%;
-        height: 70px;
-        text-align: center;
-        padding-left: 17px;
-        border-radius: 10px;
-      }
-    }
-
-/* Header/Logo Title */
 
 
 </style>
@@ -462,41 +65,41 @@ p{
 </div>
 <button class="collapsible">Content/Theme</button>
 <div class="contente" id="myBtnContainer">
-   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-    <button class="btn" onclick="filterSelection('Toolkits-Guides')"> Toolkits and Guides</button>
-    <button class="btn" onclick="filterSelection('Policy-Resources')"> Policy Resources</button>
-    <button class="btn" onclick="filterSelection('ReportsCases')"> Reports & Case Studies</button>
-    <button class="btn" onclick="filterSelection('SupplierDiv')"> Supplier Diversity Resources</button>
-    <button class="btn" onclick="filterSelection('SocialValue')"> Social Value Resources</button>
-    <button class="btn" onclick="filterSelection('SecTr')"> Sector & Trade Resources</button>
-    <button class="btn" onclick="filterSelection('Mult')"> Multimedia</button>
-    <button class="btn" onclick="filterSelection('other')"> Other Procurement Resources</button>
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" id ='Toolkits-Guides' onclick="filterSelection('Toolkits-Guides')"> Toolkits and Guides</button>
+    <button class="btn" id ='Policy-Resources' onclick="filterSelection('Policy-Resources')"> Policy Resources</button>
+    <button class="btn" id ='ReportsCases' onclick="filterSelection('ReportsCases')"> Reports & Case Studies</button>
+    <button class="btn" id ='SupplierDiv' onclick="filterSelection('SupplierDiv')"> Supplier Diversity Resources</button>
+    <button class="btn" id ='SocialValue' onclick="filterSelection('SocialValue')"> Social Value Resources</button>
+    <button class="btn" id ='SecTr' onclick="filterSelection('SecTr')"> Sector & Trade Resources</button>
+    <button class="btn" id ='Mult' onclick="filterSelection('Mult')"> Multimedia</button>
+    <button class="btn" id ='other' onclick="filterSelection('other')"> Other Procurement Resources</button>
 </div>
 <button class="collapsible">Product Tags</button>
 <div class="contente" id="myBtnContainer2">
     <button class="btn2 actives" onclick="filterSelection('all')"> Show all</button>
-    <button class="btn2" onclick="filterSelection('Socval')"> Social Value Contracts Templates & Samples</button>
-    <button class="btn2" onclick="filterSelection('SocR')"> Social Value Rfx Support Tools</button>
-    <button class="btn2" onclick="filterSelection('Stat')"> Policy Statement And Framework</button>
-    <button class="btn2" onclick="filterSelection('DirE')"> Directory Of Social Procurement/Value Suppliers</button>
-    <button class="btn2" onclick="filterSelection('ComBen')"> Community Benefits Agreements</button>
-    <button class="btn2" onclick="filterSelection('IndS')"> Industry Specific Resources</button>
-    <button class="btn2" onclick="filterSelection('DirI')"> Directory of Industry Experts</button>
-    <button class="btn2" onclick="filterSelection('BroadP')"> Broader Public Service Fact Sheets</button>
-    <button class="btn2" onclick="filterSelection('TradeA')"> Trade Agreements Fact Sheets</button>
-    <button class="btn2" onclick="filterSelection('PolP')"> Policy and Procedures Toolkit</button>
-    <button class="btn2" onclick="filterSelection('PDF')"> PDF Slide Deck and/or Recordings</button>
-    <button class="btn2" onclick="filterSelection('SurveyQ')"> Survey Questionnaires</button>
-    <button class="btn2" onclick="filterSelection('SupQ')"> Supplier Diversity Questionnaire</button>
-    <button class="btn2" onclick="filterSelection('DivSupl')"> Diverse Supplier Councils</button>
-    <button class="btn2" onclick="filterSelection('SocvalR')"> Social Value Rfx Response Templates</button>
-    <button class="btn2" onclick="filterSelection('Divcoun')"> Diverse Supplier Councils</button>
-    <button class="btn2" onclick="filterSelection('Sust')"> Sustainability</button>
-    <button class="btn2" onclick="filterSelection('SocialEcon')"> Social Economy</button>
-    <button class="btn2" onclick="filterSelection('SuppDivs')"> Supplier Diversity</button>
-    <button class="btn2" onclick="filterSelection('SocEnt')"> Social Enterprises</button>
-    <button class="btn2" onclick="filterSelection('SocP')"> Social Procurement Policies</button>
-    <button class="btn2" onclick="filterSelection('ComBens')"> Community Benefits Framework</button>
+    <button class="btn2" id ='Socval' onclick="filterSelection('Socval')"> Social Value Contracts Templates & Samples</button>
+    <button class="btn2" id ='SocR' onclick="filterSelection('SocR')"> Social Value Rfx Support Tools</button>
+    <button class="btn2" id ='Stat' onclick="filterSelection('Stat')"> Policy Statement And Framework</button>
+    <button class="btn2" id ='DirE' onclick="filterSelection('DirE')"> Directory Of Social Procurement/Value Suppliers</button>
+    <button class="btn2" id ='ComBen' onclick="filterSelection('ComBen')"> Community Benefits Agreements</button>
+    <button class="btn2" id ='IndS' onclick="filterSelection('IndS')"> Industry Specific Resources</button>
+    <button class="btn2" id ='DirI' onclick="filterSelection('DirI')"> Directory of Industry Experts</button>
+    <button class="btn2" id ='BroadP' onclick="filterSelection('BroadP')"> Broader Public Service Fact Sheets</button>
+    <button class="btn2" id ='TradeA' onclick="filterSelection('TradeA')"> Trade Agreements Fact Sheets</button>
+    <button class="btn2" id ='PolP' onclick="filterSelection('PolP')"> Policy and Procedures Toolkit</button>
+    <button class="btn2" id ='PDF' onclick="filterSelection('PDF')"> PDF Slide Deck and/or Recordings</button>
+    <button class="btn2" id ='SurveyQ' onclick="filterSelection('SurveyQ')"> Survey Questionnaires</button>
+    <button class="btn2" id ='SupQ' onclick="filterSelection('SupQ')"> Supplier Diversity Questionnaire</button>
+    <button class="btn2" id ='DivSupl' onclick="filterSelection('DivSupl')"> Diverse Supplier Councils</button>
+    <button class="btn2" id ='SocvalR' onclick="filterSelection('SocvalR')"> Social Value Rfx Response Templates</button>
+    <button class="btn2" id ='Divcoun' onclick="filterSelection('Divcoun')"> Diverse Supplier Councils</button>
+    <button class="btn2" id ='Sust' onclick="filterSelection('Sust')"> Sustainability</button>
+    <button class="btn2" id ='SocialEcon' onclick="filterSelection('SocialEcon')"> Social Economy</button>
+    <button class="btn2" id ='SuppDivs' onclick="filterSelection('SuppDivs')"> Supplier Diversity</button>
+    <button class="btn2" id ='SocEnt' onclick="filterSelection('SocEnt')"> Social Enterprises</button>
+    <button class="btn2" id ='SocP' onclick="filterSelection('SocP')"> Social Procurement Policies</button>
+    <button class="btn2" id ='ComBens' onclick="filterSelection('ComBens')"> Community Benefits Framework</button>
     <p></p>
 </div>
 
@@ -507,7 +110,7 @@ p{
 
 <!-- Portfolio Gallery Grid -->
 <div class="row">
-  <div class="column AnchorS Toolkits-Guides PDF social">
+  <div id ='What is Social Procurement' class="column AnchorS Toolkits-Guides PDF social">
     <div class="content">
       <a href="https://www.buysocialcanada.com/learn/what-is-social-procurement/" target="_blank">
         <img src="/Images/weblink.png" width= "160px"  style="display: block; float: left; padding-right: 30px; text-align: center;" alt="University of toronto" >
@@ -1192,122 +795,6 @@ p{
 
 <!-- END MAIN -->
 </div>
-
-<script>
-filterSelection("all")
-
-
-function searchFunction(){
-  var input, filter, x, a, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  x = document.getElementsByClassName("column");
-  for (i = 0; i < x.length; i++) {
-    a = x[i].getElementsByTagName("h4")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      w3AddClass(x[i], "show");
-    }
-    else {
-      w3RemoveClass(x[i], "show");
-    }
-  }
-
-}
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-window.onload = function() {
-  alert("If you have or know of any new relevant policy documents you would like to see included, please get in touch.");
-};
-
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-
-// Add active class to the second  button (highlight it)
-var btnContainer2 = document.getElementById("myBtnContainer2");
-var btns2 = btnContainer2.getElementsByClassName("btn2");
-for (var i = 0; i < btns2.length; i++) {
-  btns2[i].addEventListener("click", function(){
-    var current2 = document.getElementsByClassName("actives");
-    current2[0].className = current2[0].className.replace(" actives", "");
-    this.className += " actives";
-  });
-}
-
-// Add active class to the second  button (highlight it)
-var btnContainer3 = document.getElementById("myBtnContainer3");
-var btns3 = btnContainer3.getElementsByClassName("btn3");
-for (var i = 0; i < btns3.length; i++) {
-  btns3[i].addEventListener("click", function(){
-    var current3 = document.getElementsByClassName("actived");
-    current3[0].className = current3[0].className.replace(" actived", "");
-    this.className += " actived";
-  });
-}
-</script>
-
+<script src="script.js"></script> 
 </body>
 </html>
