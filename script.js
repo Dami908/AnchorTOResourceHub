@@ -65,9 +65,9 @@ function w3RemoveClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
-window.onload = function() {
-  alert("If you have or know of any new relevant policy documents you would like to see included, please get in touch.");
-};
+// window.onload = function() {
+//   alert("If you have or know of any new relevant policy documents you would like to see included, please get in touch.");
+// };
 
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
