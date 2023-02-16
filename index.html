@@ -66,7 +66,7 @@
 </div>
 <button class="collapsible">Content/Theme</button>
 <div class="contente" id="myBtnContainer">
-    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn activel" onclick="filterSelection('all')"> Show all</button>
     <button class="btn" id ='Toolkits-Guides' onclick="filterSelection('Toolkits-Guides')"> Toolkits and Guides</button>
     <button class="btn" id ='Policy-Resources' onclick="filterSelection('Policy-Resources')"> Policy Resources</button>
     <button class="btn" id ='ReportsCases' onclick="filterSelection('ReportsCases')"> Reports & Case Studies</button>
@@ -127,8 +127,7 @@
         <img id ='resoure2' src="/Images/weblink.png" width= "160px" style="display: block; float: left; padding-right: 30px; text-align: center;" alt="University of toronto" >
         <h4 id ='resoure2' style="font-family: KXALCC+Helvetica">Social Procurement</h4>
         <p id ='resoure2' style="color: #818181;font-family: Merriweather">This departmental policy will facilitate and support the inclusion of socio-economic measures in procurements to enhance best value in ...</p>
-        <p id ='resoure2' style="color: #121111;font-family: Merriweather"><b>York University
-    </b></p>
+        <p id ='resoure2' style="color: #121111;font-family: Merriweather"><b>York University</b></p>
       </a>
     </div>
   </div>
@@ -358,18 +357,6 @@
         </b></p>
       </a>
     </div>
-  </div>
-  <div class="column AnchorS Toolkits-Guides Stat PolP social">
-    <div class="content">
-      <a id ='resoure23' href="https://heightpm.com/s/Auckland-Council-HW-Height-Social-Procurement-Toolkit-4pp.pdf" target="_blank">
-        <img src="/Images/PDF.png" width= "160px" style="display: block; float: left; padding-right: 30px; text-align: center;" alt="University of toronto" >
-        <h4>The Social Procurement Toolkit - Height</h4>
-        <p style="font-family: KXALCC+Helvetica; color: #818181;">The Social Procurement Toolkit provides a practical way to embed and deliver social outcomes in contracts and projects to help address these challenges.</p>
-        <p style="font-family: KXALCC+Helvetica; color: #121111;"><b>Auckland Council
-        </b></p>
-      </a>
-    </div>
-  </div>
   <div class="column AnchorS ReportsCases">
     <div class="content">
       <a id ='resoure24' href="https://www.vendorpanel.com/insights/biggest-barriers-social-procurement-2022" target="_blank">
@@ -796,6 +783,120 @@
 
 <!-- END MAIN -->
 </div>
-<script src="script.js"></script> 
+<script>
+  filterSelection("all")
+
+
+function searchFunction(){
+  var input, filter, x, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  x = document.getElementsByClassName("column");
+  for (i = 0; i < x.length; i++) {
+    a = x[i].getElementsByTagName("h4")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      w3AddClass(x[i], "show");
+    }
+    else {
+      w3RemoveClass(x[i], "show");
+    }
+  }
+
+}
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+// window.onload = function() {
+//   alert("If you have or know of any new relevant policy documents you would like to see included, please get in touch.");
+// };
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("activel");
+    current[0].className = current[0].className.replace(" activel", "");
+    this.className += " activel";
+  });
+}
+
+// Add active class to the second  button (highlight it)
+var btnContainer2 = document.getElementById("myBtnContainer2");
+var btns2 = btnContainer2.getElementsByClassName("btn2");
+for (var i = 0; i < btns2.length; i++) {
+  btns2[i].addEventListener("click", function(){
+    var current2 = document.getElementsByClassName("actives");
+    current2[0].className = current2[0].className.replace(" actives", "");
+    this.className += " actives";
+  });
+}
+
+// Add active class to the second  button (highlight it)
+var btnContainer3 = document.getElementById("myBtnContainer3");
+var btns3 = btnContainer3.getElementsByClassName("btn3");
+for (var i = 0; i < btns3.length; i++) {
+  btns3[i].addEventListener("click", function(){
+    var current3 = document.getElementsByClassName("actived");
+    current3[0].className = current3[0].className.replace(" actived", "");
+    this.className += " actived";
+  });
+}
+</script> 
 </body>
 </html>
